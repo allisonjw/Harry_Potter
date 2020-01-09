@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { getPotterApi } from '../../util/apiCalls';
 import { addCharacters, addHouses, addSpells, isLoading } from '../../actions';
-// import { bindActionCreators } from 'redux';
+import Login from '../Login/Login';
 // import Header from '../../containers/Header/Header';
-import Houses from '../Houses/Houses';
+// import Houses from '../Houses/Houses';
 import { Route } from 'react-router-dom';
 import './App.scss';
 import { render } from 'enzyme';
@@ -30,8 +30,12 @@ export class App extends Component {
 };
     
     render() {
+      const { characters, houses, spells } = this.props;
+    //   let allPaths = [...characters, ...houses, ...spells];
         return (
             <main className="App">
+               <Route path='/login' render={() => <Login />} />
+
                 <h2>Welcome to Harry Potter</h2>
             </main>
         )
