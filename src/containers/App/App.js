@@ -34,9 +34,9 @@ export class App extends Component {
     //   let allPaths = [...characters, ...houses, ...spells];
         return (
             <main className="App">
-               <Route path='/login' render={() => <Login />} />
+               <Route exact path='/login' render={() => <Login />} />
+               <Route path='/houses' render/>
 
-                <h2>Welcome to Harry Potter</h2>
             </main>
         )
     }
