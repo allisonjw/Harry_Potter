@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { getPotterApi } from '../../util/apiCalls';
 import { addCharacters, addHouses, addSpells, isLoading } from '../../actions';
 import Login from '../Login/Login';
-// import Header from '../../containers/Header/Header';
-// import Houses from '../Houses/Houses';
+import Navbar from '../../components/Navbar/Navbar';
+import Charms from '../../components/Charms/Charms';
+import Houses from '../Houses/Houses';
 import { Route } from 'react-router-dom';
 import './App.scss';
 import { render } from 'enzyme';
@@ -30,12 +31,13 @@ export class App extends Component {
 };
     
     render() {
-      const { characters, houses, spells } = this.props;
+    //   const { characters, houses, spells } = this.props;
     //   let allPaths = [...characters, ...houses, ...spells];
         return (
             <main className="App">
                <Route exact path='/login' render={() => <Login />} />
-               <Route path='/houses' render/>
+               <Route exact path='/houses' render={() => <> <Navbar /> <Houses /> </>}/>
+               <Route exact path='/charms' render={() => <> <Navbar /> <Charms /> </>}/>
 
             </main>
         )

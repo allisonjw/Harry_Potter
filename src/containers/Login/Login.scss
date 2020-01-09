@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Henny+Penny|ZCOOL+XiaoWei&display=swap");
+
 .login_main {
     background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ), url(https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg);
     align-items: center;
@@ -12,6 +14,7 @@
 }
 
 h1 {
+    font-family: 'Henny Penny', cursive;
     font-size: 4em;
     color: white;
 }
@@ -19,7 +22,8 @@ h1 {
 .login_witchcraft {
     background-color: #aca9a3;
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-    font-size: 4em;
+    font-family: 'Henny Penny', cursive;
+    font-size: 3em;
     text-transform: uppercase;
     color: #252627;
     margin-top: 25%;
@@ -27,6 +31,7 @@ h1 {
 
 .submit-btn {
     border-radius: 3px;
+    font-family: 'Henny Penny', cursive;
     font-size: 2em;
     height: 60px;
     margin-bottom: 10%;
