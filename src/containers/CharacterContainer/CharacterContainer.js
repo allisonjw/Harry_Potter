@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './CharacterContainer.scss';
-import CharacterCard from '../CharacterCard/CharacterCard'
+import CharacterCard from '../../components/CharacterCard/CharacterCard';
 
 export class CharacterContainer extends Component {
     constructor() {

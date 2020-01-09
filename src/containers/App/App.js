@@ -5,9 +5,10 @@ import Login from '../Login/Login';
 import Navbar from '../../components/Navbar/Navbar';
 import Charms from '../../components/Charms/Charms';
 import Houses from '../Houses/Houses';
+import Favorites from '../Favorites/Favorite';
 import { Route } from 'react-router-dom';
 import './App.scss';
-import { render } from 'enzyme';
+// import { render } from 'enzyme';
 import { connect } from 'react-redux';
 
 
@@ -36,19 +37,19 @@ export class App extends Component {
         return (
             <main className="App">
                <Route exact path='/login' render={() => <Login />} />
-               <Route exact path='/houses' render={() => <> <Navbar /> <Houses /> </>}/>
-               <Route exact path='/charms' render={() => <> <Navbar /> <Charms /> </>}/>
-
+               <Route path='/houses' render={() => <> <Navbar /> <Houses /> </>}/>
+               <Route path='/charms' render={() => <> <Navbar /> <Charms /> </>}/>
+               <Route path='/favorites' render={() => <> <Navbar /> <Favorites /> </>}/>
             </main>
         )
     }
 };
 
-export const mapStateToProps = state => ({
-    allHouses: state.houses,
-    allCharacters: state.characters,
-    allSpells: state.spells,
-    isLoading: state.isLoading
+export const mapStateToProps = (allHouses, allCharacters, allSpells, isLoading) => ({
+    allHouses,
+    allCharacters,
+    allSpells,
+    isLoading,
 });
 
 export const mapDispatchToProps = dispatch => ({

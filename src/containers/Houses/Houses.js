@@ -5,14 +5,15 @@ import { connect } from 'react-redux';
 
 
 export class Houses extends Component {
-    constructor(props) {
-        super (props)
-        this.state = {}
+  
+    
+    redirect = () => {
     }
-
-
+    
     render() {
+        console.log('houses', this.props.houses.housesReducer)
         return (
+            // <Redirect to={`/movies/${this.props.id}`}/>
             <section className="section_house-main">
                 <article className="article_house-cards">
                   <h3>name: "Hufflepuff"</h3>
@@ -20,15 +21,20 @@ export class Houses extends Component {
                   <h3>houseGhost: "The Fat Friar"</h3>
                   <p>values: "hard work", "patience", "justice", "loyalty"</p>
                   <p>colors: "yellow", "black"</p>
+                    <button  
+                        className="house_card_btn" 
+                        type="submit" 
+                        onClick={() => this.redirect()}>View Characters
+                    </button>
                 </article>
             </section>
         )
     }
 }
 
-export const mapStateToProps = state => ({
-    houses: state.houses,
-    characters: state.characters
+export const mapStateToProps = houses => ({
+    houses,
+    // characters
 });
 
 export default connect(mapStateToProps)(Houses);
