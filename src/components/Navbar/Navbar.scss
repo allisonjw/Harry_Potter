@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    background-color: #aca9a3;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_h3 {
+    font-size: 3em;
+    margin-left: 2%;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-evenly;
+      .nav-btn {
+          font-size: 1.5em;
+          height: 60px;
+      }
+}
+

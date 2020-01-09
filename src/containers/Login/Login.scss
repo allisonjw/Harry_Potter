@@ -1,0 +1,33 @@
+.login_main {
+    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ), url(https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg);
+    align-items: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+}
+
+#blockColorblindContent {
+    display: none;
+}
+
+h1 {
+    font-size: 4em;
+    color: white;
+}
+
+.login_witchcraft {
+    background-color: #aca9a3;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+    font-size: 4em;
+    text-transform: uppercase;
+    color: #252627;
+    margin-top: 25%;
+}
+
+.submit-btn {
+    border-radius: 3px;
+    font-size: 2em;
+    height: 60px;
+    margin-bottom: 10%;
+}
