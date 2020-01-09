@@ -4,12 +4,12 @@ import './Navbar.scss';
 
 export const Navbar = () => {
   return (
-    <div className='Navbar'>
-        <h3>HP</h3>
-      <div className='Nav-links'>
-        <NavLink to='/Charms'><button className='nav_spell-btn'>Spells</button>
+    <div className='navbar'>
+        <h3 className="nav_h3">HP</h3>
+      <div className='nav_links'>
+        <NavLink to='/Charms'><button className='nav-btn'>Spells</button>
         </NavLink>
-        <NavLink to='/Favorites'><button className='nav_fav-btn'>Favorites</button>
+        <NavLink to='/Favorites'><button className='nav-btn'>Favorites</button>
         </NavLink>
       </div>
     </div>

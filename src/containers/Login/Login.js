@@ -4,14 +4,12 @@ import { Link } from 'react-router-dom';
 
 export const Login = () => {
     return (
-        <div>
+        <section className="login_main">
           <h1>Harry Potter</h1>
           <h2 className='login_witchcraft'>Witchcraft and Wizardry</h2>
-            <section> 
                 <Link to='/houses' ><button className='submit-btn'>Submit</button>
                 </Link> 
-            </section>
-        </div>
+        </section>
     )
 };
 
