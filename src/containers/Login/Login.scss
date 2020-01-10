@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Henny+Penny|ZCOOL+XiaoWei&display=swap");
 
+// @font-face {
+//     font-family: 'Harry Potter Regular';
+//     font-style: normal;
+//     font-weight: normal;
+//     src: local('Harry Potter Regular'), url('HARRP___.woff') format('woff');
+//     }
+
 .login_main {
     background-image: url(https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg);
     align-items: center;
@@ -15,6 +22,7 @@
 
 h1 {
     font-family: 'Henny Penny', cursive;
+    // font-family: 'Harry Potter Regular';
     font-size: 4em;
     color: white;
 }
@@ -22,6 +30,7 @@ h1 {
 .login_witchcraft {
     background-color: #aca9a3;
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+    // font-family: 'Harry Potter Regular';
     font-family: 'Henny Penny', cursive;
     font-size: 3em;
     text-transform: uppercase;

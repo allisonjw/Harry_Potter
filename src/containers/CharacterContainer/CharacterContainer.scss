@@ -3,4 +3,13 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "card" "card"
+    "card" "card";
+    overflow-x: scroll;
 }

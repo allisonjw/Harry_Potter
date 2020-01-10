@@ -1,0 +1,25 @@
+
+.article_character-cards {
+    background-color: #f5deb378;
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px #393636cf;
+    text-align: center;
+    grid-area: card;
+    margin: 4%;
+    padding: 2%;
+      h3 {
+          font-size: 2em;
+      }
+}
+
+.fav_btn {
+    font-size: 2em;
+    margin-bottom: 3%;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px #1d1b1bf7;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+      }
+}
