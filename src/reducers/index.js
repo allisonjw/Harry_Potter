@@ -5,8 +5,8 @@ import { spellsReducer } from './spellsReducer';
 import { isLoadingReducer } from './isLoadingReducer';
 
 export const rootReducer = combineReducers({
-    charactersReducer,
-    housesReducer,
-    spellsReducer,
-    isLoadingReducer,
+    allCharacters: charactersReducer,
+    allHouses: housesReducer,
+    allSpells: spellsReducer,
+    isLoading: isLoadingReducer,
 })
