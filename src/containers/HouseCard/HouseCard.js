@@ -1,22 +1,19 @@
 import React, {Component} from 'react';
-import './Houses.scss';
+import './HouseCard.scss';
 import CharactersContainer from '../CharacterContainer/CharacterContainer';
 import { connect } from 'react-redux';
 
 
-export class Houses extends Component {
+export const HouseCard = props => {
+//   const { name, mascot, houseGhost, values, colors } = this.props
   
     
-    redirect = () => {
-    }
-    
-    render() {
-        console.log('houses', this.props.houses.housesReducer)
+        // console.log('houses', allHouses)
         return (
             // <Redirect to={`/movies/${this.props.id}`}/>
             <section className="section_house-main">
                 <article className="article_house-cards">
-                  <h3>name: "Hufflepuff"</h3>
+                  <h3>name:</h3>
                   <h3>mascot: "badger"</h3>
                   <h3>houseGhost: "The Fat Friar"</h3>
                   <p>values: "hard work", "patience", "justice", "loyalty"</p>
@@ -30,11 +27,11 @@ export class Houses extends Component {
             </section>
         )
     }
-}
 
-export const mapStateToProps = houses => ({
-    houses,
-    // characters
+
+export const mapStateToProps = state => ({
+    // allHouses: state.houses, 
+    allCharacters: state.characters
 });
 
-export default connect(mapStateToProps)(Houses);
+export default connect(mapStateToProps)(HouseCard);

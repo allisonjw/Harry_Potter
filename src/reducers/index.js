@@ -8,5 +8,5 @@ export const rootReducer = combineReducers({
     charactersReducer,
     housesReducer,
     spellsReducer,
-    isLoadingReducer
+    isLoadingReducer,
 })

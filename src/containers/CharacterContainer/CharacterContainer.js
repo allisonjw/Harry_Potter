@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CharacterContainer.scss';
 import CharacterCard from '../../components/CharacterCard/CharacterCard';
+import { connect } from 'react-redux';
 
-export class CharacterContainer extends Component {
-    constructor() {
-        super()
-        this.state = {}
-    }
 
-    displayCharacters = () => {
-        return this.props.characters.map(character => {
+export const CharacterContainer = props => {
+  // const {  allCharacters } = this.props
+
+    const displayCharacters = () => {
+        return this.props.allCharacters.map(character => {
             return (
             <CharacterCard
               {...character}
@@ -19,17 +18,19 @@ export class CharacterContainer extends Component {
           })
     }
 
-  render() {
       return (
           <>
-          <p>CharacterContainer</p>
           <section className="section_houses-characters">
-                    {this.displayCharacters}
+                    {displayCharacters}
          </section>
           </>
       )
   }
 
-}
 
-export default CharacterContainer;
+export const mapStateToProps = state => ({
+  allHouses: state.houses, 
+  allCharacters: state.characters
+});
+
+export default connect(mapStateToProps)(CharacterContainer);
