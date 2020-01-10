@@ -1,50 +1,33 @@
-import React, {Component} from 'react';
-import './Houses.scss';
+import React from 'react';
+import './HousesContainer.scss';
 // import CharactersContainer from '../CharacterContainer/CharacterContainer';
 import HouseCard from '../HouseCard/HouseCard';
 import { connect } from 'react-redux';
 
 
-export class HousesContainer extends Component {
-    constructor() {
-        super()
-        this.state = {}
-    }
-    getHouseData = () => {
-    const houses = this.props.allHouses.map(house => house.name)
-        console.log('fund', houses)
-    }
-
-    displayHouses = () => {
-        console.log(this.props.allHouses.housesReducer)
-        return this.props.allHouses.housesReducer.map(house => {
-            console.log(house)
-          return (
+export const HousesContainer = props => {
+   const { allHouses } = props
+ 
+    const displayHouses = allHouses.map(house => {
+            return (
           <HouseCard
-            {...house}
+          {...house}
             key={house.id}
           />
           )
         })
-      };
-
-    redirect = () => {
-    }
     
-    render() {
-        console.log('houses', this.props.allHouses)
+
         return (
-            // <Redirect to={`/movies/${this.props.id}`}/>
-            <section className="section_house-main">
-                {this.displayHouses()}
-            </section>
+              <section className="section_house-main">
+                {displayHouses}
+              </section>
         )
     }
-}
+
 
 export const mapStateToProps = state => ({
-    allHouses: state.houses, 
-    allCharacters: state.characters
+    allHouses: state.allHouses, 
 });
 
 export default connect(mapStateToProps)(HousesContainer);
