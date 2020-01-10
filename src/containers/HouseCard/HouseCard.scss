@@ -1,28 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Henny+Penny|ZCOOL+XiaoWei&display=swap");
-
-.section_house-main {
-    background-image: url('https://happytowander.com/wp-content/uploads/Gloucester-Cathedral-in-England-1280-2.jpg');
-    background-size: cover;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "card" "card"
-    "card" "card";
-    overflow-x: scroll;
-}
 
 .article_house-cards {
     background-color: #f5deb378;
     border-radius: 3px;
-    box-shadow: 10px 10px 5px #393636a8;
-    font-family: 'Henny Penny', cursive;
+    box-shadow: 10px 10px 5px #393636cf;
     text-align: center;
     grid-area: card;
-    margin: 19%;
+    margin: 4%;
+    padding: 2%;
       h3 {
           font-size: 2em;
+      }
+}
+
+.house_card-btn {
+    font-size: 2em;
+    margin-bottom: 3%;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px #1d1b1bf7;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
       }
 }
 
