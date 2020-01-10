@@ -6,7 +6,8 @@ import { rootReducer } from './reducers/index';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom';
+import * as serviceWorker from './serviceWorker';
 
 const store = createStore(rootReducer, composeWithDevTools())
 
@@ -17,4 +18,7 @@ ReactDOM.render(
       </Router>
     </Provider>,
     document.getElementById('root'));
+
+    serviceWorker.unregister();
+
 
