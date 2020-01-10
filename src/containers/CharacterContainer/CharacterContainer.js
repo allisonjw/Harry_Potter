@@ -3,12 +3,11 @@ import './CharacterContainer.scss';
 import CharacterCard from '../../components/CharacterCard/CharacterCard';
 import { connect } from 'react-redux';
 
-
 export const CharacterContainer = props => {
-  // const {  allCharacters } = this.props
+  const {  allCharacters } = props
+  console.log(allCharacters)
 
-    const displayCharacters = () => {
-        return this.props.allCharacters.map(character => {
+    const displayCharacters = allCharacters.map(character => {
             return (
             <CharacterCard
               {...character}
@@ -16,7 +15,7 @@ export const CharacterContainer = props => {
             />
             )
           })
-    }
+
 
       return (
           <>
@@ -29,8 +28,8 @@ export const CharacterContainer = props => {
 
 
 export const mapStateToProps = state => ({
-  allHouses: state.houses, 
-  allCharacters: state.characters
+  allCharacters: state.allCharacters,
+  allHouses: state.allHouses, 
 });
 
 export default connect(mapStateToProps)(CharacterContainer);
