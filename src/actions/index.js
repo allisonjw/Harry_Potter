@@ -17,3 +17,13 @@ export const isLoading = isLoading => ({
     type: 'SET_LOADING',
     isLoading
 });
+
+export const addFavorite = (id) => ({
+    type: 'ADD_FAVORITE',
+    id
+});
+  
+export const deleteFavorite = (id) => ({
+    type: 'DELETE_FAVORITE',
+    id
+});
