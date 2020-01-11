@@ -18,6 +18,11 @@ export const isLoading = isLoading => ({
     isLoading
 });
 
+export const houseCharacters = filteredStudents => ({
+    type: 'SET_CHARACTERS',
+    filteredStudents
+});
+
 export const addFavorite = (id) => ({
     type: 'ADD_FAVORITE',
     id
