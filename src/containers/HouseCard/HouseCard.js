@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './HouseCard.scss';
-import { houseCharacters } from '../../actions';
+import { addHouseCharacters } from '../../actions';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -10,9 +10,9 @@ import { bindActionCreators } from 'redux';
 export class HouseCard extends Component {
   
     charcHouse = () => {
-        const {  allCharacters, name } = this.props
+        const {  allCharacters, name, addHouseCharacters } = this.props
         let filteredChars = allCharacters.filter(char => 'house' in char).filter(ch => ch.house === name)
-        houseCharacters(filteredChars)
+        addHouseCharacters(filteredChars)
     };
 
     render() {
@@ -50,7 +50,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => {
     return bindActionCreators({ 
-        houseCharacters: filteredStudents => dispatch( houseCharacters(filteredStudents) ) 
+        addHouseCharacters: filteredStudents => dispatch( addHouseCharacters(filteredStudents) ) 
     }, dispatch)
 };
 

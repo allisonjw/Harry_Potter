@@ -60,6 +60,7 @@ export class CharacterCard extends Component {
 
 export const mapStateToProps = ( state ) => ({
     allCharacters: state.allCharacters,
+    filteredCharacters: state.filteredCharacters,
     favoriteCharacters: state.favoriteCharacters,
     isLoading: state.isLoading
   })

@@ -18,7 +18,7 @@ export const isLoading = isLoading => ({
     isLoading
 });
 
-export const houseCharacters = filteredStudents => ({
+export const addHouseCharacters = filteredStudents => ({
     type: 'SET_CHARACTERS',
     filteredStudents
 });
