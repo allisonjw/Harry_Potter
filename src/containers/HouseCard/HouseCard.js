@@ -1,33 +1,57 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './HouseCard.scss';
-// import CharacterContainer from '../CharacterContainer/CharacterContainer';
+import { houseCharacters } from '../../actions';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+// import { CharacterContainer } from '../CharacterContainer/CharacterContainer';
+// import { PropTypes } from 'prop-types';
 
-export const HouseCard = props => {
-  const { name, mascot, houseGhost, values, colors } = props
-  return (
-      // <Redirect to={`/movies/${this.props.id}`}/>
-      <section className="section_house-card">
-                <article className="article_house-cards">
-                  <h3>NAME:  {name}</h3>
-                  <h3>MASCOT:  {mascot}</h3>
-                  <h3>HOUSE GHOST:  {houseGhost}</h3>
-                  <p>VALUES: "hard work", "patience", "justice", "loyalty"</p>
-                  <p>COLORS: "yellow", "black"</p>
-                    <button  
+export class HouseCard extends Component {
+  
+    charcHouse = () => {
+        const {  allCharacters, name } = this.props
+        let filteredChars = allCharacters.filter(char => 'house' in char).filter(ch => ch.house === name)
+        houseCharacters(filteredChars)
+    };
+
+    render() {
+        const {  name, mascot, houseGhost, values, colors, isLoading } = this.props
+        return (
+            <section className="section_house-card">
+                {isLoading && <img className='loading-img' src='https://media.giphy.com/media/JonSfMu0Kzs5K9Wu7I/giphy.gif' alt='loading' />}
+                {!isLoading && <div className='categories-div'>
+                  <article className="article_house-cards">
+                    <h3>NAME:  {name}</h3>
+                    <h3>MASCOT:  {mascot}</h3>
+                    <h3>HOUSE GHOST:  {houseGhost}</h3>
+                    <p>VALUES: {values}</p>
+                    <p>COLORS: {colors}</p>
+                    <Link to='./character'>
+                        <button  
                         className="house_card-btn" 
                         type="submit" 
-                        onClick={() => this.redirect()}>View Characters
-                    </button>
-                </article>
+                        onClick={() => {this.charcHouse()}}>View Characters
+                        </button>
+                    </Link>
+                  </article>
+                </div>}
             </section>
         )
-    }
-
+    };
+};
 
 export const mapStateToProps = state => ({
     allHouses: state.allHouses, 
-    allCharacters: state.allCharacters
+    allCharacters: state.allCharacters,
+    filteredCharacters: state.filteredCharacters,
+    isLoading: state.isLoading
 });
 
-export default connect(mapStateToProps)(HouseCard);
+export const mapDispatchToProps = dispatch => {
+    return bindActionCreators({ 
+        houseCharacters: filteredStudents => dispatch( houseCharacters(filteredStudents) ) 
+    }, dispatch)
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HouseCard);
