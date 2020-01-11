@@ -7,7 +7,7 @@ import Charms from '../../components/Charms/Charms';
 import CharacterContainer from '../CharacterContainer/CharacterContainer';
 import HousesContainer from '../HousesContainer/HousesContainer';
 import Favorites from '../Favorites/Favorite';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import './App.scss';
 import { connect } from 'react-redux';
@@ -40,6 +40,7 @@ export class App extends Component {
                <Route path='/charms' render={() => <> <Navbar /> <Charms /> </>}/>
                <Route path='/character' render={() => <> <Navbar /> <CharacterContainer /> </>}/>
                <Route path='/favorites' render={() => <> <Navbar /> <Favorites /> </>}/>
+               <Redirect to='/login' />
             </Switch>
         )
     }
