@@ -12,6 +12,25 @@ export class CharacterCard extends Component {
         }
     };
 
+    // toggleCollection = (product) => {
+    //     const { collection } = this.props;
+    //     collection.map(product => product.id).includes(product.id) ? this.removeProduct(product) : this.addProduct(product);
+    //   }
+    
+    //   addProduct = (product) => {
+    //     const { collection, setCollection } = this.props;
+    //     let newCollection = [...collection, product];
+    //     setCollection(newCollection);
+    //     localStorage.setItem('collection', JSON.stringify(newCollection));
+    //   }
+    
+    //   removeProduct = (product) => {
+    //     const { collection, setCollection } = this.props;
+    //     let newCollection = collection.filter(savedProduct => savedProduct.id !== product.id);
+    //     setCollection(newCollection);
+    //     localStorage.setItem('collection', JSON.stringify(newCollection));
+    //   }
+
     toggleFavorite = () => {
         const { addFavorite, deleteFavorite, favoriteCharacters, _id } = this.props;
         console.log(favoriteCharacters)
@@ -20,9 +39,11 @@ export class CharacterCard extends Component {
     }; 
 
     render() {
-        const { name, house, dumbledoresArmy, bloodStatus  } = this.props
+        const { name, house, dumbledoresArmy, bloodStatus, isLoading  } = this.props
         return (
             <section className="section_character-card">
+              {isLoading && <img className='loading-img' src='https://media.giphy.com/media/JonSfMu0Kzs5K9Wu7I/giphy.gif' alt='loading' />}
+              {!isLoading && <div className='categories-div'>
                 <article className="article_character-cards">
                     <h3>NAME:  {name}</h3>
                     <img src=""></img>
@@ -30,15 +51,17 @@ export class CharacterCard extends Component {
                     <h3>DUMBLEDORE's ARMY: {dumbledoresArmy}</h3>
                     <h3>BLOOD STATUS: {bloodStatus}"</h3>
                     <button className="fav_btn" onClick={() => this.toggleFavorite()}>Favorite</button>
-                    </article>
+                </article>
+              </div>}    
             </section>
         )
     }
 }
 
-export const mapStateToProps = ({ allCharacters, favoriteCharacters }) => ({
-    allCharacters,
-    favoriteCharacters
+export const mapStateToProps = ( state ) => ({
+    allCharacters: state.allCharacters,
+    favoriteCharacters: state.favoriteCharacters,
+    isLoading: state.isLoading
   })
   
   export const mapDispatchToProps = (dispatch) => (

@@ -6,28 +6,29 @@ import { connect } from 'react-redux';
 
 
 export const CharacterContainer = props => {
-  const {  allCharacters } = props
+  const {  filteredCharacters } = props
+console.log('chcard', filteredCharacters)
 
-    const displayCharacters = allCharacters.map(character => {
+    const displayCharacters = filteredCharacters.map(character => {
           return (
             <CharacterCard
-              {...character}
-              key={character.id}
+            {...character}
+            key={character._id}
             />
           );
     });
 
-      return (
-          <section className="section_houses-characters">
-                    {displayCharacters}
-         </section>
-      )
-  };
-
+    return (
+      <section className="section_houses-characters">
+        {displayCharacters}
+      </section>
+    )
+};
 
 export const mapStateToProps = state => ({
-  allCharacters: state.allCharacters,
-  allHouses: state.allHouses, 
+  filteredCharacters: state.filteredCharacters,
+  isLoading: state.isLoading,
+  allHouses: state.allHouses 
 });
 
 export default connect(mapStateToProps)(CharacterContainer);
