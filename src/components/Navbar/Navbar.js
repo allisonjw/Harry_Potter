@@ -5,7 +5,7 @@ import './Navbar.scss';
 export const Navbar = () => {
   return (
     <div className='navbar'>
-        <h3 className="nav_h3">HP</h3>
+      <NavLink to='/login' className={`nav_h3`}>HP</NavLink>
       <div className='nav_links'>
         <NavLink to='/Charms'><button className='nav-btn'>Spells</button>
         </NavLink>
