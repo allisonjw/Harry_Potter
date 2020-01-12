@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 
 export const CharacterContainer = props => {
   const {  filteredCharacters } = props
-console.log('chcard', filteredCharacters)
 
     const displayCharacters = filteredCharacters.map(character => {
           return (
