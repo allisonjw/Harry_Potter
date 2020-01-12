@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 
 export const CharacterContainer = props => {
-  const {  filteredCharacters } = props
+  const {  filteredCharacters} = props
 
     const displayCharacters = filteredCharacters.map(character => {
           return (

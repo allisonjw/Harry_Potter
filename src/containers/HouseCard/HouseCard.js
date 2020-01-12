@@ -4,7 +4,6 @@ import { addHouseCharacters } from '../../actions';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import { CharacterContainer } from '../CharacterContainer/CharacterContainer';
 // import { PropTypes } from 'prop-types';
 
 export class HouseCard extends Component {
@@ -23,6 +22,7 @@ export class HouseCard extends Component {
                 {!isLoading && <div className='categories-div'>
                   <article className="article_house-cards">
                     <h3>NAME:  {name}</h3>
+                    <img src="https://media.giphy.com/media/VuTPhjE6NIWzK/giphy.gif" alt="hogwarts school crest" className="house_crest"/>
                     <h3>MASCOT:  {mascot}</h3>
                     <h3>HOUSE GHOST:  {houseGhost}</h3>
                     <p>VALUES: {values}</p>

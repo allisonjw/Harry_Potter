@@ -39,18 +39,18 @@ export class CharacterCard extends Component {
     }; 
 
     render() {
-        const { name, house, dumbledoresArmy, bloodStatus, isLoading  } = this.props
+        const { _id, name, house, dumbledoresArmy, bloodStatus, isLoading, favoriteCharacters  } = this.props
+        const toggleWand = favoriteCharacters.includes(_id) ? 'chosen-wand' : 'favorite-wand';
         return (
             <section className="section_character-card">
               {isLoading && <img className='loading-img' src='https://media.giphy.com/media/JonSfMu0Kzs5K9Wu7I/giphy.gif' alt='loading' />}
               {!isLoading && <div className='categories-div'>
                 <article className="article_character-cards">
                     <h3>NAME:  {name}</h3>
-                    <img src=""></img>
                     <h3>HOUSE: {house}</h3>
                     <h3>DUMBLEDORE's ARMY: {dumbledoresArmy}</h3>
                     <h3>BLOOD STATUS: {bloodStatus}"</h3>
-                    <button className="fav_btn" onClick={() => this.toggleFavorite()}>Favorite</button>
+                    <img src="https://media.giphy.com/media/Js1Fd7ANot7Q7ZXEcb/giphy.gif" alt="moving wand" className={toggleWand} onClick={() => this.toggleFavorite()}/>
                 </article>
               </div>}    
             </section>

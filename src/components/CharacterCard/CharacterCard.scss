@@ -1,8 +1,9 @@
 
 .article_character-cards {
-    background-color: #f5deb378;
+    background-color: #673ab7a3;
     border-radius: 3px;
-    box-shadow: 10px 10px 5px #393636cf;
+    box-shadow: 6px 5px 7px 4px #0a021aa3;
+    color: white;
     text-align: center;
     grid-area: card;
     margin: 4%;
@@ -23,3 +24,33 @@
         transition: all .4s ease-in-out;
       }
 }
+
+.favorite-wand {
+    height: 8em;
+    margin-left: 21em;
+    transform: rotate(13deg);
+    transition: linear 2s ease-in-out;
+    cursor: grab;
+ }
+ 
+ .favorite-wand:hover {
+   transform: rotate(-13deg);
+ }
+ 
+ .chosen-wand {
+   height: 8em;
+   margin-left: 21em;
+   transform: rotate(110deg);
+   transition: linear 2s ease-in-out;
+   cursor: grab;
+   border-radius: 50%;
+   background-color: #ffeb00b8;
+   box-shadow: 
+   0 0px 1px #ffeb0045, 
+   0 0 28px 7px #ffeb3b8c, 
+   0 0 9px 18px #ffeb3b94;
+ }
+ 
+ .chosen-wand:hover {
+   transform: rotate(125deg);
+ }

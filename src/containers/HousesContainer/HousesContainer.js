@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 // import { PropTypes } from 'prop-types';
 
 export const HousesContainer = props => {
-   const { allHouses } = props
+   const { allHouses} = props
  
   const displayHouses = allHouses.map(house => {
     return (
@@ -18,9 +18,9 @@ export const HousesContainer = props => {
   });
 
   return (
-    <section className="section_house-main">
-      {displayHouses}
-    </section>
+      <section className="section_house-main">
+        {displayHouses}
+      </section>
   )
 };
 

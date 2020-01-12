@@ -1,5 +1,14 @@
-.section_favorite {
-    background-image: url(https://www.hp-lexicon.org/wp-content/uploads/2016/05/quidditch_stadium_by_facegrater-d8jpbo1.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
+.article_favorite-cards {
+    background-color: #f5deb378;
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px #393636cf;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+        &:hover {
+        font-weight: 700;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+    }
 }

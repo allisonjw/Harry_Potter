@@ -2,8 +2,22 @@
     background-image: url('https://cdnb.artstation.com/p/assets/images/images/014/854/239/large/michele-di-basilio-screenshot00001.jpg?1545920711');
     background-repeat: no-repeat;
     height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "card" "card"
+    "card" "card";
+    overflow-x: scroll;
 }
 
 p {
     margin: 0;
 }
+
+.article_charms-cards {
+    background-color: #f5deb378;
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px #393636cf;
+    text-align: center;
+    margin: 4%;
+    padding: 2%;
+}    
