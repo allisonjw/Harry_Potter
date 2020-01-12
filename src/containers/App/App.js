@@ -3,15 +3,14 @@ import { getPotterApi } from '../../util/apiCalls';
 import { addCharacters, addHouses, addSpells, isLoading } from '../../actions';
 import Login from '../Login/Login';
 import Navbar from '../../components/Navbar/Navbar';
-import Charms from '../../components/Charms/Charms';
+import CharmsContainer from '../CharmsContainer/CharmsContainer';
 import CharacterContainer from '../CharacterContainer/CharacterContainer';
 import HousesContainer from '../HousesContainer/HousesContainer';
-import Favorites from '../Favorites/Favorite';
+import FavoriteContainer from '../FavoriteContainer/FavoriteContainer';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import './App.scss';
 import { connect } from 'react-redux';
-
 
 export class App extends Component {
 
@@ -37,9 +36,9 @@ export class App extends Component {
             <Switch>
                <Route exact path='/login' render={() => <Login />} />
                <Route path='/houses' render={() => <> <Navbar /> <HousesContainer /> </>}/>
-               <Route path='/charms' render={() => <> <Navbar /> <Charms /> </>}/>
+               <Route path='/CharmsContainer' render={() => <> <Navbar /> <CharmsContainer /> </>}/>
                <Route path='/character' render={() => <> <Navbar /> <CharacterContainer /> </>}/>
-               <Route path='/favorites' render={() => <> <Navbar /> <Favorites /> </>}/>
+               <Route path='/FavoriteContainer' render={() => <> <Navbar /> <FavoriteContainer /> </>}/>
                <Redirect to='/login' />
             </Switch>
         )
@@ -57,4 +56,4 @@ export const mapDispatchToProps = dispatch => {
     return bindActionCreators({ addCharacters, addHouses, addSpells, isLoading}, dispatch) 
 };
 
-export default connect(null, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
