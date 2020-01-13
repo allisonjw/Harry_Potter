@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+<Switch>
+  <Route
+    exact={true}
+    path="/login"
+    render={[Function]}
+  />
+  <Route
+    path="/houses"
+    render={[Function]}
+  />
+  <Route
+    path="/CharmsContainer"
+    render={[Function]}
+  />
+  <Route
+    path="/character"
+    render={[Function]}
+  />
+  <Route
+    path="/FavoriteContainer"
+    render={[Function]}
+  />
+  <Redirect
+    to="/login"
+  />
+</Switch>
+`;

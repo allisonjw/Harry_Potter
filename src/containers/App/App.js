@@ -64,5 +64,5 @@ App.propTypes = {
     allCharacters: PropTypes.array,
     allHouses: PropTypes.array,
     allSpells: PropTypes.array,
-    isLoading: PropTypes.string
+    isLoading: PropTypes.func
 }
