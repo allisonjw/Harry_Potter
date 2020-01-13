@@ -33,12 +33,13 @@ export class App extends Component {
      };
     
     render() {
+        const { allSpells, allHouses, allCharacters } = this.props
         return (
             <Switch>
                <Route exact path='/login' render={() => <Login />} />
-               <Route path='/houses' render={() => <> <Navbar /> <HousesContainer /> </>}/>
-               <Route path='/CharmsContainer' render={() => <> <Navbar /> <CharmsContainer /> </>}/>
-               <Route path='/character' render={() => <> <Navbar /> <CharacterContainer /> </>}/>
+               <Route path='/houses' render={() => <> <Navbar /> <HousesContainer allHouses={allHouses}/> </>}/>
+               <Route path='/CharmsContainer' render={() => <> <Navbar /> <CharmsContainer allSpells={allSpells}/> </>}/>
+               <Route path='/character' render={() => <> <Navbar /> <CharacterContainer allCharacters={allCharacters}/> </>}/>
                <Route path='/FavoriteContainer' render={() => <> <Navbar /> <FavoriteContainer /> </>}/>
                <Redirect to='/login' />
             </Switch>
