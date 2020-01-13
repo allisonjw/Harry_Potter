@@ -9,13 +9,13 @@ describe('isLoadingReducer', () => {
   });
 
   it('should return the correct state with action type SET_LOADING', () => {
+        const initialState = false;
         const action = {
-          type: 'IS_LOADING',
-          bool: true
-        }
-        const expected = false;
-  
-        const result = isLoadingReducer(undefined, action);
-        expect(result).toEqual(expected);
-      })
+          type: 'SET_LOADING',
+          isLoading: true
+        };
+        const result = true;
+
+    expect(isLoadingReducer(initialState, action)).toEqual(result);
+  });
 });

@@ -44,6 +44,30 @@ describe('App', () => {
     });
   });
 
+  describe('mapStateToProps', () => {
+    it('should return an object with 4 paths', () => {
+      let allCharacters, allHouses, allSpells, isLoading;
+      let mockState = {
+        allCharacters,
+        allHouses,
+        allSpells,
+        isLoading
+      };
+  
+      let expected = {
+        allCharacters,
+        allHouses,
+        allSpells,
+        isLoading
+      };
+  
+      const mappedProps = mapStateToProps(mockState);
+  
+      expect(mappedProps).toEqual(expected);
+
+    });
+  });
+
   describe('mapDispatchToProps', () => {
     let mockDispatch;
   
@@ -86,6 +110,5 @@ describe('App', () => {
   
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     });
-  });  
-
-});  
+  });
+});    

@@ -52,7 +52,7 @@ export const mapStateToProps = state => ({
     allHouses: state.allHouses,
     allSpells: state.allSpells,
     isLoading: state.isLoading
-})
+});
 
 export const mapDispatchToProps = dispatch => {
     return bindActionCreators({ addCharacters, addHouses, addSpells, isLoading}, dispatch) 
@@ -65,4 +65,4 @@ App.propTypes = {
     allHouses: PropTypes.array,
     allSpells: PropTypes.array,
     isLoading: PropTypes.func
-}
+};
