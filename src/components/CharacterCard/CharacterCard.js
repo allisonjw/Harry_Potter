@@ -3,7 +3,7 @@ import './CharacterCard.scss';
 import { addFavorite, deleteFavorite } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 export class CharacterCard extends Component {
     constructor() {
@@ -39,7 +39,6 @@ export class CharacterCard extends Component {
 };
 
 export const mapStateToProps = ( state ) => ({
-    // filteredCharacters: state.filteredCharacters,
     favoriteCharacters: state.favoriteCharacters,
     isLoading: state.isLoading
 });
@@ -48,8 +47,16 @@ export const mapDispatchToProps = dispatch => {
   return bindActionCreators({ 
       addFavorite: id => dispatch( addFavorite(id) ),
       deleteFavorite: id => dispatch( deleteFavorite(id) ),
-      // addHouseCharacters: filteredStudents => dispatch( addHouseCharacters(filteredStudents) ) 
   }, dispatch)
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharacterCard);
+
+CharacterCard.propTypes = {
+    isLoading: PropTypes.string,
+    filteredCharacters: PropTypes.array,
+    favoriteCharacters: PropTypes.array,
+    addFavorite: PropTypes.string,
+    deleteFavorite: PropTypes.string
+  
+};
