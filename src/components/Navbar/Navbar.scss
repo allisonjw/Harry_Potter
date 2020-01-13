@@ -12,6 +12,11 @@
     color: black;
     font-size: 4em;
     margin-left: 2%;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+    }
 }
 
 .user_info {
