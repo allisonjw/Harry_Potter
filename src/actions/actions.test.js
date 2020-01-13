@@ -76,4 +76,15 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction);
     });
 
+    it('should have a type of ADD_USER', () => {
+        const user = {name: 'Allison', wizardType: 'Witch', house: ''};
+        const expectedAction = {
+            type: 'ADD_USER',
+            user
+        };
+
+    const result = actions.addUser(user);
+    expect(result).toEqual(expectedAction);
+    });
+
 });
