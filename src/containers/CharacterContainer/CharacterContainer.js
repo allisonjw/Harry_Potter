@@ -22,7 +22,7 @@ export const CharacterContainer = props => {
       <section className="section_character-main">
         <section className="section_character-heading">
           <Link to='/houses'>
-            <button className='back_btn' >Back</button>
+            <button className='back_btn' >Back to Houses</button>
           </Link>
           <h2 className='character_heading'>Characters</h2>
           </section>
@@ -35,8 +35,6 @@ export const CharacterContainer = props => {
 
 export const mapStateToProps = state => ({
   filteredCharacters: state.filteredCharacters,
-  isLoading: state.isLoading,
-  allHouses: state.allHouses 
 });
 
 export default connect(mapStateToProps)(CharacterContainer);
@@ -44,6 +42,6 @@ export default connect(mapStateToProps)(CharacterContainer);
 CharacterContainer.propTypes = {
   filteredCharacters: PropTypes.array,
   isLoading: PropTypes.string,
-  allHouses: PropTypes.array
+  // allHouses: PropTypes.array
 }
 

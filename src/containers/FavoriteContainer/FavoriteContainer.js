@@ -19,8 +19,8 @@ export const FavoriteContainer = (props) => {
     return (
       <section className='section_favorite-background'>
           <section className="section_favorite-heading">
-          <Link to='/character'>
-            <button className='back_btn' >Back</button>
+          <Link to='/houses'>
+            <button className='back_btn' >Back to Houses</button>
           </Link>
           <h2 className='favorite_heading'>Favorite Characters</h2>
           </section>

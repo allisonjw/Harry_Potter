@@ -1,12 +1,10 @@
 import React from 'react';
 import './HousesContainer.scss';
 import HouseCard from '../HouseCard/HouseCard';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
-export const HousesContainer = props => {
-   const { allHouses} = props
+export const HousesContainer = ({ allHouses }) => {
  
   const displayHouses = allHouses.map(house => {
     return (
@@ -20,8 +18,8 @@ export const HousesContainer = props => {
   return (
       <section className="section_house-main">
         <section className="section_houses-heading">
-          <Link to='/character'>
-            <button className='back_btn' >Back</button>
+          <Link to='/login'>
+            <button className='back_btn' >Back to Login</button>
           </Link>
           <h2 className='houses_heading'>Hogwarts Houses</h2>
           </section>
@@ -32,11 +30,7 @@ export const HousesContainer = props => {
   )
 };
 
-export const mapStateToProps = state => ({
-    allHouses: state.allHouses, 
-});
-
-export default connect(mapStateToProps)(HousesContainer);
+export default HousesContainer;
 
 HousesContainer.propTypes = {
   allHouses: PropTypes.array
