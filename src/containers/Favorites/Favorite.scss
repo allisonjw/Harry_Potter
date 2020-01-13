@@ -1,11 +1,14 @@
 .article_favorite-card {
-    background-color: #f5deb378;
+    background-color: #1c0358c9;
     border-radius: 3px;
-    box-shadow: 10px 10px 5px #393636cf;
+    box-shadow: 10px 10px 5px #150101cf;
     text-align: center;
     display: flex;
     flex-direction: column;
     margin: 2%;
+    color: white;
+    font-size: 1.5em;
+    padding: 2%;
         &:hover {
         font-weight: 700;
         transform: scale(1.1);

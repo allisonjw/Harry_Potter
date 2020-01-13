@@ -1,8 +1,9 @@
-.section_charms {
+.section_charms-main {
     background-image: url('https://cdnb.artstation.com/p/assets/images/images/014/854/239/large/michele-di-basilio-screenshot00001.jpg?1545920711');
-    background-repeat: no-repeat;
-    height: 100vh;
-    height: 100vh;
+    background-repeat: round;
+}
+
+.section_charms {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
@@ -10,3 +11,30 @@
     "card" "card";
     overflow-x: scroll;
 }
+
+.section_charms-heading {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    height: 20%;
+    justify-content: space-evenly;
+    width: 100%;
+      .charms_heading {
+          color: white;
+          text-shadow: 2px 2px 2px black;
+          margin-right: 15%;
+      }
+}
+
+.back_btn {
+    border-radius: 3px;
+    font-size: 1.2em;
+    height: 60px;
+    margin: 10% 0 0 50%;;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+      }
+}
+

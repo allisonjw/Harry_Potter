@@ -1,8 +1,8 @@
 import React from 'react';
 import './HousesContainer.scss';
-// import CharactersContainer from '../CharacterContainer/CharacterContainer';
 import HouseCard from '../HouseCard/HouseCard';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 // import { PropTypes } from 'prop-types';
 
 export const HousesContainer = props => {
@@ -19,7 +19,15 @@ export const HousesContainer = props => {
 
   return (
       <section className="section_house-main">
+        <section className="section_houses-heading">
+          <Link to='/character'>
+            <button className='back_btn' >Back</button>
+          </Link>
+          <h2 className='houses_heading'>Hogwarts Houses</h2>
+          </section>
+          <section className="section_houses">
         {displayHouses}
+        </section>
       </section>
   )
 };

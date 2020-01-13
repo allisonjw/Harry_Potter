@@ -19,8 +19,7 @@ export class HouseCard extends Component {
         return (
             <section className="section_house-card">
                 {isLoading && <img className='loading-img' src='https://media.giphy.com/media/JonSfMu0Kzs5K9Wu7I/giphy.gif' alt='loading' />}
-                {!isLoading && <div>
-                  <article className="article_house-cards">
+                {!isLoading && <article className="article_house-cards">
                     <h3>NAME:  {name}</h3>
                     <img src="https://media.giphy.com/media/VuTPhjE6NIWzK/giphy.gif" alt="hogwarts school crest" className="house_crest"/>
                     <h3>MASCOT:  {mascot}</h3>
@@ -34,8 +33,7 @@ export class HouseCard extends Component {
                         onClick={() => {this.charcHouse()}}>View Characters
                         </button>
                     </Link>
-                  </article>
-                </div>}
+                  </article>}
             </section>
         )
     };

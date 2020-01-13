@@ -17,14 +17,16 @@ export const FavoritesContainer = (props) => {
   })
 
     return (
-      <section className='section_favorite'>
-          <div className="section_favorite-heading">
+      <section className='section_favorite-background'>
+          <section className="section_favorite-heading">
           <Link to='/character'>
             <button className='back_btn' >Back</button>
           </Link>
           <h2 className='favorite_heading'>Favorite Characters</h2>
-          </div>
+          </section>
+          <section className="section_favorite">
             {favCharacter}
+          </section>
       </section>
     )
 };

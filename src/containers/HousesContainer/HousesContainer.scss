@@ -1,7 +1,9 @@
 .section_house-main {
     background-image: url('https://happytowander.com/wp-content/uploads/Gloucester-Cathedral-in-England-1280-2.jpg');
     background-size: cover;
-    height: 100vh;
+}
+
+.section_houses {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -9,4 +11,30 @@
     "card" "card"
     "card" "card";
     overflow-x: scroll;
+}
+
+.section_houses-heading {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    height: 20%;
+    justify-content: space-evenly;
+    width: 100%;
+      .houses_heading {
+        color: white;
+        text-shadow: 2px 2px 2px black;
+        margin-right: 15%;
+      }
+}
+
+.back_btn {
+    border-radius: 3px;
+    font-size: 1.2em;
+    height: 60px;
+    margin: 10% 0 0 50%;;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+      }
 }

@@ -1,13 +1,41 @@
-.section_houses-characters {
+.section_character-main {
     background-image: url('https://i.ytimg.com/vi/FWZsya9giqA/maxresdefault.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+}
+
+.section_characters {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "card" "card"
     "card" "card";
     overflow-x: scroll;
+}
+
+.section_character-heading {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    height: 20%;
+    justify-content: space-evenly;
+    width: 100%;
+      .character_heading {
+          color: white;
+          text-shadow: 2px 2px 2px black;
+          margin-right: 15%;
+      }
+}
+
+.back_btn {
+    border-radius: 3px;
+    font-size: 1.2em;
+    height: 60px;
+    margin: 10% 0 0 50%;;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+      }
 }

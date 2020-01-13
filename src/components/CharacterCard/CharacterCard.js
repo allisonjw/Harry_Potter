@@ -25,16 +25,14 @@ export class CharacterCard extends Component {
         return (
             <section className="section_character-card">
               {isLoading && <img className='loading-img' src='https://media.giphy.com/media/JonSfMu0Kzs5K9Wu7I/giphy.gif' alt='loading' />}
-              {!isLoading && <div className='categories-div'>
-                <article className="article_character-cards">
+              {!isLoading && <article className="article_character-cards">
                     <h3>NAME:  {name}</h3>
                     <h3>HOUSE: {house}</h3>
                     <h3>DUMBLEDORE's ARMY: {dumbledoresArmy}</h3>
                     <h3>BLOOD STATUS: {bloodStatus}"</h3>
                     <h3>{toggleMsg}</h3>
                     <img src="https://media.giphy.com/media/lrJyGSrcCzLAwikcjv/giphy.gif" alt="moving goblet" className='favorite_icon' onClick={() => this.toggleFavorite()}/>
-                </article>
-              </div>}    
+                </article>}
             </section>
         )
     };
