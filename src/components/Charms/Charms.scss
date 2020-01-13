@@ -8,16 +8,34 @@
     "card" "card";
     overflow-x: scroll;
 }
-
-p {
-    margin: 0;
+.charm_names {
+    display: grid;
+    // grid-area: names;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
-.article_charms-cards {
-    background-color: #0fe5d17d;
+.charm_effects {
+    display: grid;
+    // grid-area: effects;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.article_charms-cards-name,
+.article_charms-cards-effect {
     border-radius: 3px;
-    box-shadow: 5px 4px 8px 0px #076159c9;
     text-align: center;
     margin: 4%;
     padding: 2%;
-}    
+}  
+
+.article_charms-cards-name {
+    background-color: #0fe5d17d;
+    box-shadow: 5px 4px 8px 0px #076159c9;
+}
+
+.article_charms-cards-effect {
+    background-color: #ffc107b5;
+    box-shadow: 6px 7px 10px 5px #291901;
+}

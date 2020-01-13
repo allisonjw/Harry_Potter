@@ -5,10 +5,11 @@
 
 .section_charms {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;    
+    grid-template-rows: auto;
     grid-template-areas: 
-    "card" "card"
-    "card" "card";
+    "names" "effects" 
+    "names" "effects";
     overflow-x: scroll;
 }
 
@@ -37,5 +38,13 @@
         transform: scale(1.1);
         transition: all .4s ease-in-out;
       }
+}
+
+.charms_matching {
+    margin: 0;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
 }
 

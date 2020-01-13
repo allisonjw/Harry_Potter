@@ -6,12 +6,20 @@ import { PropTypes } from 'prop-types';
 export const Charms = props => {
     const { spell, type, effect } = props;
     return (
-        <article className="article_charms-cards">
-            <p>Charms and Spells Matching Game</p>
-            <h3>NAME:  {spell}</h3>
-            <h3>TYPE: {type}</h3>
-            <h3>EFFECT: {effect}</h3>
+        <>
+        <section className="charm_names">
+             <article className="article_charms-cards-name">
+                <h3>NAME:  {spell}</h3>
+                <h3>TYPE: {type}</h3>
+            </article>
+      </section>
+      <section className="charm_effects">
+           <article className="article_charms-cards-effect">
+                <h3>EFFECT: {effect}</h3>
+                <h3>TYPE: {type}</h3>
         </article>
+      </section>
+      </>
     )
 };
 
