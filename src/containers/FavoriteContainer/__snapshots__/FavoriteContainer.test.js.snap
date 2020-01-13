@@ -8,12 +8,12 @@ exports[`FavoriteContainer favorites should match snapshot with all information 
     className="section_favorite-heading"
   >
     <Link
-      to="/character"
+      to="/houses"
     >
       <button
         className="back_btn"
       >
-        Back
+        Back to Houses
       </button>
     </Link>
     <h2

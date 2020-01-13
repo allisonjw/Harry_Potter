@@ -6,7 +6,7 @@ import { PropTypes } from 'prop-types';
 import '../FavoriteContainer/FavoriteContainer.scss'; 
 
 export const FavoriteContainer = (props) => {
-    const { allCharacters, favoriteCharacters, _id } = props;
+    const { allCharacters, favoriteCharacters } = props;
     
     const findFavorite = favoriteCharacters.map(id => {
       return allCharacters.find(character => character._id === id);
@@ -33,16 +33,12 @@ export const FavoriteContainer = (props) => {
 
 export const mapStateToProps = (state) => ({
     allCharacters: state.allCharacters,
-    filteredCharacters: state.filteredCharacters,
     favoriteCharacters: state.favoriteCharacters,
-    isLoading: state.isLoading
 });
 
 export default connect(mapStateToProps)(FavoriteContainer);
 
 FavoriteContainer.propTypes = {
     allCharacters: PropTypes.array,
-    filteredCharacters: PropTypes.array,
     favoriteCharacters: PropTypes.array,
-    isLoading: PropTypes.string
 }
