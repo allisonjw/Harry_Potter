@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterContainer FilteredCharacters should match snapshot with all information passing in correctly 1`] = `
+<section
+  className="section_character-main"
+>
+  <section
+    className="section_character-heading"
+  >
+    <Link
+      to="/houses"
+    >
+      <button
+        className="back_btn"
+      >
+        Back to Houses
+      </button>
+    </Link>
+    <h2
+      className="character_heading"
+    >
+      Characters
+    </h2>
+  </section>
+  <section
+    className="section_characters"
+  >
+    <Connect(CharacterCard)
+      __v={0}
+      _id="5a0fa54aae5bc100213c232f"
+      bloodStatus="unknown"
+      deathEater={false}
+      dumbledoresArmy={true}
+      key="5a0fa54aae5bc100213c232f"
+      ministryOfMagic={false}
+      name="Bathsheda Babbling"
+      orderOfThePhoenix={false}
+      role="Professor, Ancient Runes"
+      school="Hogwarts School of Witchcraft and Wizardry"
+      species="human"
+    />
+    <Connect(CharacterCard)
+      __v={0}
+      _id="5a0fa5deae5bc100213c2330"
+      bloodStatus="unknown"
+      deathEater={false}
+      dumbledoresArmy={false}
+      key="5a0fa5deae5bc100213c2330"
+      ministryOfMagic={true}
+      name="Ludo Bagman"
+      orderOfThePhoenix={false}
+      role="Head, Department of Magical Games and Sports"
+      species="human"
+    />
+  </section>
+</section>
+`;

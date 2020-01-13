@@ -41,7 +41,5 @@ export default connect(mapStateToProps)(CharacterContainer);
 
 CharacterContainer.propTypes = {
   filteredCharacters: PropTypes.array,
-  isLoading: PropTypes.string,
-  // allHouses: PropTypes.array
 }
 

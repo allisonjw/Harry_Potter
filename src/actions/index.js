@@ -23,17 +23,17 @@ export const addHouseCharacters = filteredStudents => ({
     filteredStudents
 });
 
-export const addFavorite = (id) => ({
+export const addFavorite = id => ({
     type: 'ADD_FAVORITE',
     id
 });
   
-export const deleteFavorite = (id) => ({
+export const deleteFavorite = id => ({
     type: 'DELETE_FAVORITE',
     id
 });
 
-export const addUser = (user) => ({
+export const addUser = user => ({
     type: 'ADD_USER',
     user
 });

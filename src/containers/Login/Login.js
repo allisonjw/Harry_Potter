@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './Login.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addUser } from '../../actions';
+import { addUser } from '../../actions/index';
 import { bindActionCreators } from 'redux';
-// import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 export class Login extends Component{
     constructor() {
@@ -43,7 +43,6 @@ export class Login extends Component{
         });
     };
 
-
     render() {
         const { user } = this.props;
         const house = user === undefined ? '' : user.house;
@@ -63,7 +62,8 @@ export class Login extends Component{
               <h2 className='login_witchcraft'>Witchcraft and Wizardry</h2>
             <form className='login_form'>
                 <p className='login_msg'>Enter your name and select Witch or Wizard</p>
-                    <input className='name_input' 
+                    <input className='name_input'
+                     
                         type='text' 
                         placeholder='Enter Name' 
                         onChange={this.handleName}/>
@@ -102,3 +102,7 @@ export const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
+
+Login.propTypes = {
+    user: PropTypes.object
+};
