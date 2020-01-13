@@ -5,6 +5,7 @@ import { spellsReducer } from './spellsReducer';
 import { isLoadingReducer } from './isLoadingReducer';
 import { favoriteReducer } from './favoriteReducer'
 import { filteredCharacterReducer } from './filteredCharacterReducer';
+import { user } from './user';
 
 export const rootReducer = combineReducers({
     allCharacters: charactersReducer,
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
     allSpells: spellsReducer,
     isLoading: isLoadingReducer,
     favoriteCharacters: favoriteReducer,
-    filteredCharacters: filteredCharacterReducer
+    filteredCharacters: filteredCharacterReducer,
+    user
 })

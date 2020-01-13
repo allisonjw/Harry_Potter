@@ -7,10 +7,14 @@ import { bindActionCreators } from 'redux';
 import { PropTypes } from 'prop-types';
 
 export const Navbar = props => {
-  const { allSpells, favoriteCharacters} = props
+  const { allSpells, favoriteCharacters, user} = props
   return (
     <div className='navbar'>
       <NavLink to='/login' className={`nav_h3`}>HP</NavLink>
+      <section className="user_info">
+      <h2 className="nav_user-info">{user.name}</h2>
+      <h2 className="nav_user-info">{user.wizardType}</h2>
+      </section>
       <div className='nav_links'>
         <NavLink to='/CharmsContainer' onClick={() => addSpells(allSpells)}><button className='nav-btn'>Spells</button>
         </NavLink>
@@ -24,6 +28,7 @@ export const Navbar = props => {
 export const mapStateToProps = state => ({
   allSpells: state.allSpells,
   favoriteCharacters: state.favoriteCharacters,
+  user: state.user
 });
 
 export const mapDispatchToProps = dispatch => {

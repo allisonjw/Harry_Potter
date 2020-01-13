@@ -32,3 +32,8 @@ export const deleteFavorite = (id) => ({
     type: 'DELETE_FAVORITE',
     id
 });
+
+export const addUser = (user) => ({
+    type: 'ADD_USER',
+    user
+});

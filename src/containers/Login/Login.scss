@@ -1,3 +1,18 @@
+%font_styling {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+%button_styling {
+    border-radius: 3px;
+    font-size: 2em;
+    height: 60px;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+      }
+}
 
 .login_main {
     background-image: url(https://images.ctfassets.net/usf1vwtuqyxm/7EsDSrJhr0pNwUNK8lrUwY/f8d7e5101de6dda8f46c0f94673087a9/HP-Hogwarts-39PHOTOBU17074_PHUP_HP.jpg);
@@ -14,29 +29,43 @@
 
 h1 {
     font-size: 4em;
-    color: white;
-    text-shadow: 2px 2px 2px black;
+    @extend %font_styling;
 }
 
 .login_witchcraft {
-    background-color: #aca9a3;
-    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-    box-shadow: 3px 3px 10px 3px;
     font-size: 3em;
     text-transform: uppercase;
-    color: #252627;
-    margin-top: 25%;
-    text-shadow: 1px 1px 1px;
+    @extend %font_styling;
 }
 
-.submit-btn {
-    border-radius: 3px;
-    font-size: 2em;
-    height: 60px;
-    margin: 50% 0 0 0;
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: all .4s ease-in-out;
+.login_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18%;
+    width: 70%;
+    align-items: center;
+      .name_input {
+          font-size: 1.7em;
       }
+}
+
+.login_msg,
+.wizardType_label {
+    font-size: 2em;
+    @extend %font_styling;
+}
+
+.wizardType_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+      .wizardType_button {
+        @extend %button_styling;
+      }
+}
+
+.submit_button {
+    @extend %button_styling;
+    margin: 20%;
 }
