@@ -9,3 +9,28 @@
     overflow-y: hidden;
     padding: 1%;
 }
+
+.section_favorite-heading {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    height: 20%;
+    justify-content: space-evenly;
+    width: 100%;
+      .favorite_heading {
+          margin-right: 15%;
+      }
+}
+
+.back_btn {
+    border-radius: 3px;
+    font-size: 1.2em;
+    height: 60px;
+    margin: 10% 0 0 50%;;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .4s ease-in-out;
+      }
+}
+

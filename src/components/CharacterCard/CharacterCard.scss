@@ -13,44 +13,11 @@
       }
 }
 
-.fav_btn {
-    font-size: 2em;
-    margin-bottom: 3%;
-    border-radius: 3px;
-    box-shadow: 5px 5px 5px #1d1b1bf7;
+.favorite_icon {
+  height: 30%;
     &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: all .4s ease-in-out;
-      }
+      cursor: pointer;
+      transform: scale(1.3);
+      transition: all .4s ease-in-out;
+    }
 }
-
-.favorite-wand {
-    height: 8em;
-    margin-left: 21em;
-    transform: rotate(13deg);
-    transition: linear 2s ease-in-out;
-    cursor: grab;
- }
- 
- .favorite-wand:hover {
-   transform: rotate(-13deg);
- }
- 
- .chosen-wand {
-   height: 8em;
-   margin-left: 21em;
-   transform: rotate(110deg);
-   transition: linear 2s ease-in-out;
-   cursor: grab;
-   border-radius: 50%;
-   background-color: #ffeb00b8;
-   box-shadow: 
-   0 0px 1px #ffeb0045, 
-   0 0 28px 7px #ffeb3b8c, 
-   0 0 9px 18px #ffeb3b94;
- }
- 
- .chosen-wand:hover {
-   transform: rotate(125deg);
- }

@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import '../FavoriteContainer/FavoriteContainer.scss'; 
 
 export const FavoritesContainer = (props) => {
-    const { allCharacters,favoriteCharacters, _id } = props;
-
+    const { allCharacters, favoriteCharacters, _id } = props;
+    
     const findFavorite = favoriteCharacters.map((id) => {
     return allCharacters.find((character) => character._id === id);
   });
@@ -18,13 +18,13 @@ export const FavoritesContainer = (props) => {
 
     return (
       <section className='section_favorite'>
-          <Link to='/characters'>
+          <div className="section_favorite-heading">
+          <Link to='/character'>
             <button className='back_btn' >Back</button>
           </Link>
-          <h2 className='favorites'>Favorite Characters</h2>
-          <div className='fav-characters'>
-            {favCharacter}
+          <h2 className='favorite_heading'>Favorite Characters</h2>
           </div>
+            {favCharacter}
       </section>
     )
 };
