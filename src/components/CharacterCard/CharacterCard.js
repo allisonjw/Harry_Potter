@@ -4,7 +4,6 @@ import { addFavorite, deleteFavorite } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { PropTypes } from 'prop-types';
-
 export class CharacterCard extends Component {
     constructor() {
         super()
@@ -58,5 +57,4 @@ CharacterCard.propTypes = {
     favoriteCharacters: PropTypes.array,
     addFavorite: PropTypes.string,
     deleteFavorite: PropTypes.string
-  
 };

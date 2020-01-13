@@ -3,12 +3,11 @@ import './CharacterContainer.scss';
 import CharacterCard from '../../components/CharacterCard/CharacterCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-// import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 
 export const CharacterContainer = props => {
-  const {  filteredCharacters} = props
+  const { filteredCharacters } = props
 
     const displayCharacters = filteredCharacters.map(character => {
           return (
@@ -41,3 +40,10 @@ export const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(CharacterContainer);
+
+CharacterContainer.propTypes = {
+  filteredCharacters: PropTypes.array,
+  isLoading: PropTypes.string,
+  allHouses: PropTypes.array
+}
+

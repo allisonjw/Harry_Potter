@@ -30,7 +30,7 @@ describe('getPotterApi', () => {
       });
     });
   
-    expect(getPotterApi(path)).rejects.toEqual(Error('Could not fetch path'));
+    expect(getPotterApi(path)).rejects.toEqual(Error('Error fetching Potter Api'));
   });
 
   it('should return an error if the server is down', () => {

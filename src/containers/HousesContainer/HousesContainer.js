@@ -3,7 +3,7 @@ import './HousesContainer.scss';
 import HouseCard from '../HouseCard/HouseCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 export const HousesContainer = props => {
    const { allHouses} = props
@@ -37,3 +37,7 @@ export const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(HousesContainer);
+
+HousesContainer.propTypes = {
+  allHouses: PropTypes.array
+};

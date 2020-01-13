@@ -1,6 +1,7 @@
 import React from 'react';
 import './Favorite.scss';
 import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
 
 export const Favorite = (props) => {
     const { name, house, dumbledoresArmy, bloodStatus, isLoading } = props
@@ -22,3 +23,12 @@ export const mapStateToProps = ( state ) => ({
 });
       
 export default connect(mapStateToProps)(Favorite);
+
+Favorite.propTypes = {
+    favoriteCharacters: PropTypes.array,
+    isLoading: PropTypes.string,
+    name: PropTypes.string,
+    house: PropTypes.string,
+    dumbledoresArmy: PropTypes.bool,
+    bloodStatus: PropTypes.string
+};

@@ -11,6 +11,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import './App.scss';
 import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
 
 export class App extends Component {
 
@@ -56,4 +57,11 @@ export const mapDispatchToProps = dispatch => {
     return bindActionCreators({ addCharacters, addHouses, addSpells, isLoading}, dispatch) 
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+App.propTypes = {
+    allCharacters: PropTypes.array,
+    allHouses: PropTypes.array,
+    allSpells: PropTypes.array,
+    isLoading: PropTypes.string
+}

@@ -4,6 +4,7 @@ import './Navbar.scss';
 import { addSpells, addFavorite } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { PropTypes } from 'prop-types';
 
 export const Navbar = props => {
   const { allSpells, favoriteCharacters} = props
@@ -30,3 +31,8 @@ export const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+
+Navbar.propTypes = {
+  allSpells: PropTypes.array,
+  favoriteCharacters: PropTypes.array
+};

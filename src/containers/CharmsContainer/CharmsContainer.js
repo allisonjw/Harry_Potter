@@ -4,7 +4,7 @@ import Charms from '../../components/Charms/Charms';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../CharmsContainer/CharmsContainer.scss';
-// import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 export const CharmsContainer = props => {
   const {allSpells } = props
@@ -38,3 +38,7 @@ export const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(CharmsContainer);
+
+CharmsContainer.propTypes = {
+  allSpells: PropTypes.array
+}

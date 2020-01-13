@@ -4,7 +4,7 @@ import { addHouseCharacters } from '../../actions';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types';
 
 export class HouseCard extends Component {
   
@@ -53,3 +53,10 @@ export const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HouseCard);
+
+HouseCard.propTypes = {
+    allCharacters: PropTypes.array,
+    allHouses: PropTypes.array,
+    filteredCharacters: PropTypes.array,
+    isLoading: PropTypes.string
+};
