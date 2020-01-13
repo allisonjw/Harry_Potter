@@ -2,19 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Favorite } from '../Favorites/Favorite';
 import { Link } from 'react-router-dom';
-// import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types';
 import '../FavoriteContainer/FavoriteContainer.scss'; 
 
-export const FavoritesContainer = (props) => {
+export const FavoriteContainer = (props) => {
     const { allCharacters, favoriteCharacters, _id } = props;
     
-    const findFavorite = favoriteCharacters.map((id) => {
-    return allCharacters.find((character) => character._id === id);
-  });
+    const findFavorite = favoriteCharacters.map(id => {
+      return allCharacters.find(character => character._id === id);
+    });
 
-  const favCharacter = findFavorite.map((character) => {
-    return <Favorite {...character} />
-  })
+    const favCharacter = findFavorite.map(character => {
+      return <Favorite {...character}/>
+    });
 
     return (
       <section className='section_favorite-background'>
@@ -38,4 +38,11 @@ export const mapStateToProps = (state) => ({
     isLoading: state.isLoading
 });
 
-export default connect(mapStateToProps)(FavoritesContainer);
+export default connect(mapStateToProps)(FavoriteContainer);
+
+FavoriteContainer.propTypes = {
+    allCharacters: PropTypes.array,
+    filteredCharacters: PropTypes.array,
+    favoriteCharacters: PropTypes.array,
+    isLoading: PropTypes.string
+}

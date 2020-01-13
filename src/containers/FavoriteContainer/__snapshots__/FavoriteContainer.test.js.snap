@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteContainer favorites should match snapshot with all information passing in correctly 1`] = `
+<section
+  className="section_favorite-background"
+>
+  <section
+    className="section_favorite-heading"
+  >
+    <Link
+      to="/character"
+    >
+      <button
+        className="back_btn"
+      >
+        Back
+      </button>
+    </Link>
+    <h2
+      className="favorite_heading"
+    >
+      Favorite Characters
+    </h2>
+  </section>
+  <section
+    className="section_favorite"
+  >
+    <Favorite />
+  </section>
+</section>
+`;
