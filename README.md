@@ -24,11 +24,15 @@ Harry Potter Game is a web based application/game that allows Wizards and Witche
   * SASS/SCSS
 
 ## Images
-![]()
-![]()
-
+### Login 
+![Login](https://github.com/allisonjw/Harry_Potter/blob/master/src/images/localhost_3000_login.png)
+### Houses
+![houses](https://github.com/allisonjw/Harry_Potter/blob/master/src/images/localhost_3000_houses.png)
+### House Characters
+![house_characters](https://github.com/allisonjw/Harry_Potter/blob/master/src/images/localhost_3000_characters.png)
+### Charms and Spells
+![charms and spells](https://github.com/allisonjw/Harry_Potter/blob/master/src/images/localhost_3000_spells.png)
 ## GIFS
-![]()
-![]()
+![Screen Capture](https://github.com/allisonjw/Harry_Potter/blob/master/src/images/Jan-13-2020%2016-08-24.gif.sb-6d975c8b-ItxQJG)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
