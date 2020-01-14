@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import { addUser } from '../../actions/index';
 import { Login, mapStateToProps, mapDispatchToProps } from './Login';

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharmsContainer should match snapshot with all information passing in correctly 1`] = `
+<section
+  className="section_charms-main"
+>
+  <section
+    className="section_charms-heading"
+  >
+    <Link
+      to="/houses"
+    >
+      <button
+        className="back_btn"
+      >
+        Back to Houses
+      </button>
+    </Link>
+    <h2
+      className="charms_heading"
+    >
+       charms
+    </h2>
+  </section>
+  <p
+    className="charms_matching"
+  >
+    Charms and Spells Matching Game
+  </p>
+  <section
+    className="section_charms"
+  >
+    <Connect(Charms)
+      _id="5b74ebd5fb6fc0739646754c"
+      effect="opens objects"
+      key="5b74ebd5fb6fc0739646754c"
+      spell="Aberto"
+      type="Charm"
+    />
+    <Connect(Charms)
+      __v={0}
+      _id="5b74ecfa3228320021ab622b"
+      effect="Summons an object"
+      key="5b74ecfa3228320021ab622b"
+      spell="Accio"
+      type="Charm"
+    />
+  </section>
+</section>
+`;

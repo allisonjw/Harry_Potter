@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HousesContainer should match snapshot with all information passing in correctly 1`] = `
+<section
+  className="section_house-main"
+>
+  <section
+    className="section_houses-heading"
+  >
+    <Link
+      to="/login"
+    >
+      <button
+        className="back_btn"
+      >
+        Back to Login
+      </button>
+    </Link>
+    <h2
+      className="houses_heading"
+    >
+      Hogwarts Houses
+    </h2>
+  </section>
+  <section
+    className="section_houses"
+  >
+    <Connect(HouseCard)
+      __v={0}
+      _id="5a05e2b252f721a3cf2ea33f"
+      colors={
+        Array [
+          "scarlet",
+          "gold",
+        ]
+      }
+      founder="Goderic Gryffindor"
+      headOfHouse="Minerva McGonagall"
+      houseGhost="Nearly Headless Nick"
+      key="5a05e2b252f721a3cf2ea33f"
+      mascot="lion"
+      members={
+        Array [
+          "5a0fa648ae5bc100213c2332",
+          "5a0fa67dae5bc100213c2333",
+        ]
+      }
+      name="Gryffindor"
+      school="Hogwarts School of Witchcraft and Wizardry"
+      values={
+        Array [
+          "courage",
+          "bravery",
+          "nerve",
+          "chivalry",
+        ]
+      }
+    />
+    <Connect(HouseCard)
+      __v={0}
+      _id="5a05da69d45bd0a11bd5e06f"
+      colors={
+        Array [
+          "blue",
+          " bronze",
+        ]
+      }
+      founder="Rowena Ravenclaw"
+      headOfHouse="Fillius Flitwick"
+      houseGhost="The Grey Lady"
+      key="5a05da69d45bd0a11bd5e06f"
+      mascot="eagle"
+      members={
+        Array [
+          "5a0fa8a6ae5bc100213c233b",
+          "5a107ffee0686c0021283b21",
+        ]
+      }
+      name="Ravenclaw"
+      school="Hogwarts School of Witchcraft and Wizardry"
+      values={
+        Array [
+          "intelligence",
+          "creativity",
+          "learning",
+          "wit",
+        ]
+      }
+    />
+  </section>
+</section>
+`;
