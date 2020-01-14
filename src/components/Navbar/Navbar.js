@@ -35,7 +35,7 @@ export const mapDispatchToProps = dispatch => {
   return bindActionCreators({ addSpells, addFavorite }, dispatch) 
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps)(Navbar);
 
 Navbar.propTypes = {
   allSpells: PropTypes.array,

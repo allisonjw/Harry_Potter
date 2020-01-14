@@ -16,7 +16,7 @@ describe('CharmsContainer', () => {
             type: "Charm",
             effect: "Summons an object",
             __v: 0
-        },
+        }
       ];
 
       const mockAddSpells = [

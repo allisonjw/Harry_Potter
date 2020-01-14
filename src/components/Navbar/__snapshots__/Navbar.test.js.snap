@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Nav should match snapshot with all information passing in correctly 1`] = `
+<div
+  className="navbar"
+>
+  <NavLink
+    className="nav_h3"
+    to="/login"
+  >
+    HP
+  </NavLink>
+  <section
+    className="user_info"
+  >
+    <h2
+      className="nav_user-info"
+    >
+      name
+    </h2>
+    <h2
+      className="nav_user-info"
+    >
+      wizard
+    </h2>
+  </section>
+  <div
+    className="nav_links"
+  >
+    <NavLink
+      onClick={[Function]}
+      to="/CharmsContainer"
+    >
+      <button
+        className="nav-btn"
+      >
+        Spells
+      </button>
+    </NavLink>
+    <NavLink
+      onClick={[Function]}
+      to="/FavoriteContainer"
+    >
+      <button
+        className="nav-btn"
+      >
+        Favorites
+      </button>
+    </NavLink>
+  </div>
+</div>
+`;

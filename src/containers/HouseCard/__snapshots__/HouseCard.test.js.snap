@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HouseCard Characters should match snapshot with all information passing in correctly 1`] = `
+<section
+  className="section_house-card"
+>
+  <img
+    alt="loading"
+    className="loading-img"
+    src="https://media.giphy.com/media/JonSfMu0Kzs5K9Wu7I/giphy.gif"
+  />
+</section>
+`;

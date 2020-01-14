@@ -40,7 +40,7 @@ export class HouseCard extends Component {
 };
 
 export const mapStateToProps = state => ({
-    allHouses: state.allHouses, 
+    // allHouses: state.allHouses, 
     allCharacters: state.allCharacters,
     filteredCharacters: state.filteredCharacters,
     isLoading: state.isLoading
