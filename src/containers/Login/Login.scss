@@ -45,8 +45,11 @@ h1 {
     width: 70%;
     align-items: center;
       .name_input {
-          font-size: 1.7em;
-      }
+        font-size: 1.7em;
+        box-shadow: inset 1px 1px 2px 1px black;
+        padding-left: 1.5%;
+        outline: none;
+    }
 }
 
 .login_msg,
@@ -62,6 +65,7 @@ h1 {
     width: 40%;
       .wizardType_button {
         @extend %button_styling;
+        box-shadow: 9px 10px 10px 1px black;
       }
 }
 

@@ -12,7 +12,9 @@ export const Navbar = props => {
     <div className='navbar'>
       <NavLink to='/login' className={`nav_h3`}>HP</NavLink>
       <section className="user_info">
+      <h3 className="nav_user-info">Welcome</h3>
       <h2 className="nav_user-info">{user.name}</h2>
+      <h2 className="nav_user-info">the</h2>
       <h2 className="nav_user-info">{user.wizardType}</h2>
       </section>
       <div className='nav_links'>
