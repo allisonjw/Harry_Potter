@@ -1,5 +1,6 @@
 import React from 'react';
 import './HousesContainer.scss';
+import '../HouseCard/HouseCard.scss'
 import HouseCard from '../HouseCard/HouseCard';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';

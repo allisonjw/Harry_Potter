@@ -17,7 +17,7 @@ export class HouseCard extends Component {
     render() {
         const {  name, mascot, houseGhost, values, colors, isLoading } = this.props
         return (
-            <section className="section_house-card">
+            <>
                 {isLoading && <img className='loading-img' src='https://media.giphy.com/media/JonSfMu0Kzs5K9Wu7I/giphy.gif' alt='loading' />}
                 {!isLoading && <article className="article_house-cards">
                     <h3>NAME:  {name}</h3>
@@ -34,7 +34,7 @@ export class HouseCard extends Component {
                         </button>
                     </Link>
                   </article>}
-            </section>
+            </>
         )
     };
 };
@@ -48,7 +48,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => {
     return bindActionCreators({ 
-        addHouseCharacters: filteredStudents => dispatch( addHouseCharacters(filteredStudents) ) 
+        addHouseCharacters, 
     }, dispatch)
 };
 
