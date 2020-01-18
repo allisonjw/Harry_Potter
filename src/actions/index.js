@@ -37,3 +37,8 @@ export const addUser = user => ({
     type: 'ADD_USER',
     user
 });
+
+export const setPlayerHouse = house => ({
+    type: 'SET_HOUSE',
+    house
+});

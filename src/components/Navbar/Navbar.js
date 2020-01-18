@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './Navbar.scss';
 import { addSpells, addFavorite } from '../../actions';
 import { connect } from 'react-redux';
@@ -7,15 +7,17 @@ import { bindActionCreators } from 'redux';
 import { PropTypes } from 'prop-types';
 
 export const Navbar = props => {
-  const { allSpells, favoriteCharacters, user} = props
+  const { allSpells, favoriteCharacters, user, playerHouse} = props
   return (
     <div className='navbar'>
-      <NavLink to='/login' className={`nav_h3`}>HP</NavLink>
+      <Link to='/login'>
+      <img
+      className={`nav_HP`}
+      alt="harry potter intials"
+      src={require('../../images/harry-potter-lightning-bolt-transparent-9.png')} 
+      /></Link>
       <section className="user_info">
-      <h3 className="nav_user-info">Welcome</h3>
-      <h2 className="nav_user-info">{user.name}</h2>
-      <h2 className="nav_user-info">the</h2>
-      <h2 className="nav_user-info">{user.wizardType}</h2>
+        <h2 className="nav_user-info">Welcome {user.name} the {user.wizardType} from {playerHouse}</h2>
       </section>
       <div className='nav_links'>
         <NavLink to='/CharmsContainer' onClick={() => addSpells(allSpells)}><button className='nav-btn'>Spells</button>
@@ -30,7 +32,8 @@ export const Navbar = props => {
 export const mapStateToProps = state => ({
   allSpells: state.allSpells,
   favoriteCharacters: state.favoriteCharacters,
-  user: state.user
+  user: state.user,
+  playerHouse: state.playerHouse
 });
 
 export const mapDispatchToProps = dispatch => {

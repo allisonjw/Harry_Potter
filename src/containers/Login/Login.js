@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './Login.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addUser } from '../../actions/index';
+import { addUser, setPlayerHouse, isLoading } from '../../actions/index';
 import { bindActionCreators } from 'redux';
 import { PropTypes } from 'prop-types';
+import { getPotterApi } from '../../util/apiCalls';
 
 export class Login extends Component{
     constructor() {
@@ -13,6 +14,19 @@ export class Login extends Component{
             name: '',
             wizardType: '',
             house: ''
+        }
+    };
+
+    selectHouse = async () => {
+        const { setPlayerHouse, isLoading } = this.props
+        try {
+          isLoading(true);
+          const playerHouse = await getPotterApi('sortingHat');
+          setPlayerHouse(playerHouse)
+          console.log(setPlayerHouse)
+          isLoading(false)
+        } catch ({ message }) {
+          console.log(message)
         }
     };
 
@@ -25,11 +39,11 @@ export class Login extends Component{
     };
     
     handleUser = () => {
-        const { addUser } = this.props
+        const { addUser, playerHouse } = this.props
         const user = {
             name: this.state.name,
             wizardType: this.state.wizardType,
-            house: this.state.house
+            house: playerHouse.toLowerCase()
         };
         addUser(user)
         this.clearInputs();
@@ -82,7 +96,7 @@ export class Login extends Component{
                         onClick={this.handleWizardType}>Wizard
                     </button>
                 </div>
-                    <Link to='/houses' >
+                    <Link to='/houses' onClick={this.selectHouse}>
                         {submitButton}
                     </Link>
             </form>      
@@ -91,13 +105,17 @@ export class Login extends Component{
     }
 };
 
-export const mapStateToProps = ({ user }) => ({
-    user
+export const mapStateToProps = ({ user, playerHouse, isLoading }) => ({
+    user,
+    playerHouse,
+    isLoading
 });
 
 export const mapDispatchToProps = dispatch => {
     return bindActionCreators({ 
-        addUser: user => dispatch( addUser(user) ) 
+        addUser,
+        setPlayerHouse,
+        isLoading
     }, dispatch)
 };
 

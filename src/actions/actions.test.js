@@ -1,15 +1,4 @@
-import * as actions from '../actions';
-
-describe('actions', () => {
-    it('should have a type of ADD_CHARACTERS', () => {
-        const characters = [{}, {}, {}];
-        const expectedAction = {
-            type: 'ADD_CHARACTERS',
-            characters
-        };
-    const result = actions.addCharacters(characters);
-    expect(result).toEqual(expectedAction);
-    });
+o
 
     it('should have a type of ADD_HOUSES', () => {
         const houses = [{}, {}, {}];

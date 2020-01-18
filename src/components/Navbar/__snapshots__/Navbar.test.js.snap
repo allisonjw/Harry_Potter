@@ -13,10 +13,20 @@ exports[`Navbar Nav should match snapshot with all information passing in correc
   <section
     className="user_info"
   >
+    <h3
+      className="nav_user-info"
+    >
+      Welcome
+    </h3>
     <h2
       className="nav_user-info"
     >
       name
+    </h2>
+    <h2
+      className="nav_user-info"
+    >
+      the
     </h2>
     <h2
       className="nav_user-info"
