@@ -13,7 +13,7 @@ export const FavoriteContainer = (props) => {
     });
 
     const favCharacter = findFavorite.map(character => {
-      return <Favorite {...character}/>
+      return <Favorite {...character} key={character._id}/>
     });
 
     return (

@@ -20,12 +20,14 @@ export class CharacterCard extends Component {
 
     render() {
         const { favoriteCharacters, _id, name, house, dumbledoresArmy, bloodStatus, isLoading } = this.props
+        const houseCrest = house || 'hogwarts';
         const toggleMsg = favoriteCharacters.includes(_id) ? 'REMOVE FAVORITE' : 'ADD FAVORITE';
         return (
             <section className="section_character-card">
               {isLoading && <img className='loading-img' src='https://media.giphy.com/media/JonSfMu0Kzs5K9Wu7I/giphy.gif' alt='loading' />}
               {!isLoading && <article className="article_character-cards">
                     <h3>NAME:  {name}</h3>
+                    <img alt="house crest" className="character_houseCrest" src={require(`../../images/${houseCrest}.png`)}/>
                     <h3>HOUSE: {house}</h3>
                     <h3>DUMBLEDORE's ARMY: {dumbledoresArmy}</h3>
                     <h3>BLOOD STATUS: {bloodStatus}"</h3>
@@ -44,8 +46,8 @@ export const mapStateToProps = ( state ) => ({
   
 export const mapDispatchToProps = dispatch => {
   return bindActionCreators({ 
-      addFavorite: id => dispatch( addFavorite(id) ),
-      deleteFavorite: id => dispatch( deleteFavorite(id) ),
+      addFavorite,
+      deleteFavorite,
   }, dispatch)
 };
 
@@ -56,5 +58,5 @@ CharacterCard.propTypes = {
     filteredCharacters: PropTypes.array,
     favoriteCharacters: PropTypes.array,
     addFavorite: PropTypes.string,
-    deleteFavorite: PropTypes.string
+    deleteFavorite: PropTypes.func
 };
