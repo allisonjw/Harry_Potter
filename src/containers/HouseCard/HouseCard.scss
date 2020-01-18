@@ -1,24 +1,31 @@
 
 .article_house-cards {
-    background-color: #f5deb378;
+    background-color: #f5deb3db;;
     border-radius: 3px;
     box-shadow: 10px 10px 5px #393636cf;
     text-align: center;
-    grid-area: card;
-    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    color: white;
+    font-size: 1.5em;
     padding: 2%;
-      h3 {
-          font-size: 2em;
+    min-width: 420px;
+    justify-content: space-evenly;
+      h3, p {
+        text-shadow: 2px 2px 2px black;
       }
 }
 
 .house_crest {
+    align-self: center;
     width: 52%;
 }
 
 .house_card-btn {
-    font-size: 2em;
-    margin-bottom: 3%;
+    font-size: 1.7em;
+    width: 90%;
+    height: 60px;
     border-radius: 3px;
     box-shadow: 5px 5px 5px #1d1b1bf7;
     &:hover {

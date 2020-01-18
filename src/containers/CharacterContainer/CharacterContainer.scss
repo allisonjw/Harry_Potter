@@ -7,11 +7,13 @@
 
 .section_characters {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 4fr));    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "card" "card"
     "card" "card";
     overflow-x: scroll;
+    grid-gap: 1%;
+    margin: 1%;
 }
 
 .section_character-heading {

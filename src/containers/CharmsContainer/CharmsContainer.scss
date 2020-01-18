@@ -1,6 +1,8 @@
 .section_charms-main {
     background-image: url('https://cdnb.artstation.com/p/assets/images/images/014/854/239/large/michele-di-basilio-screenshot00001.jpg?1545920711');
     background-repeat: round;
+    height: 100vh;
+    overflow-x: scroll;
 }
 
 .section_charms {
@@ -19,11 +21,13 @@
     font-size: 2em;
     height: 20%;
     justify-content: space-evenly;
+    margin-bottom: 3%;
     width: 100%;
       .charms_heading {
           color: white;
           text-shadow: 2px 2px 2px black;
           margin-right: 15%;
+          margin-top: 3%;
       }
 }
 
@@ -32,7 +36,7 @@
     font-size: 1.2em;
     height: 60px;
     width: 100%;
-    margin: 4% 0 0 15%;
+    margin: 19% 0 0 15%;
     &:hover {
         cursor: pointer;
         transform: scale(1.1);
