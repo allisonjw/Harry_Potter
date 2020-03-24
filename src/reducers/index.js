@@ -7,6 +7,7 @@ import { favoriteReducer } from './favoriteReducer'
 import { filteredCharacterReducer } from './filteredCharacterReducer';
 import { user } from './user';
 import { playerHouseReducer } from './playerHouseReducer';
+import { matchReducer } from './matchReducer';
 
 export const rootReducer = combineReducers({
     allCharacters: charactersReducer,
@@ -16,5 +17,6 @@ export const rootReducer = combineReducers({
     favoriteCharacters: favoriteReducer,
     filteredCharacters: filteredCharacterReducer,
     user,
-    playerHouse: playerHouseReducer
+    playerHouse: playerHouseReducer,
+    matchSpells: matchReducer
 });

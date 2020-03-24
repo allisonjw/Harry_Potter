@@ -1,4 +1,4 @@
-o
+
 
     it('should have a type of ADD_HOUSES', () => {
         const houses = [{}, {}, {}];

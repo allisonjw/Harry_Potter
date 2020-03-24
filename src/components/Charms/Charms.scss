@@ -13,11 +13,17 @@
 }
 
 .article_charms-cards-name,
-.article_charms-cards-effect {
+.article_charms-cards-effect,
+.active_spell,
+.active_effect {
     border-radius: 3px;
     text-align: center;
     margin: 4%;
     padding: 2%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
         cursor: pointer;
         transform: scale(1.1);
@@ -43,4 +49,20 @@
 .active_effect {
     background-color: yellow;
     border-color: pink;
+}
+
+.message {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+.hide {
+    display: none;
+    position: absolute;
+}
+  
+.show {
+    z-index: 1;
+    position: absolute;
 }

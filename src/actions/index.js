@@ -38,7 +38,12 @@ export const addUser = user => ({
     user
 });
 
-export const setPlayerHouse = house => ({
+export const setPlayerHouse = id => ({
     type: 'SET_HOUSE',
-    house
+    id
+});
+
+export const selectedCards = spell => ({
+    type: 'MATCH',
+    spell
 });

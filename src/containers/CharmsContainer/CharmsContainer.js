@@ -1,5 +1,6 @@
 import React from 'react';
 import './CharmsContainer.scss';
+import '../../components/Charms/Charms.scss'
 import Charms from '../../components/Charms/Charms';
 import { Link } from 'react-router-dom';
 import '../CharmsContainer/CharmsContainer.scss';
@@ -7,7 +8,9 @@ import { PropTypes } from 'prop-types';
 
 export const CharmsContainer = ({ allSpells }) => {
 
-  const displaySpells = allSpells.map(spell => {
+  const randomSpells = allSpells.sort(() => .5 - Math.random()).slice(0,7);
+
+  const displaySpells = randomSpells.map(spell => {
     return (
       <Charms
       {...spell}
