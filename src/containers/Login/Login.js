@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { addUser, setPlayerHouse, isLoading } from '../../actions/index';
 import { bindActionCreators } from 'redux';
 import { PropTypes } from 'prop-types';
-import { getPotterApi } from '../../util/apiCalls';
+import { getCharacterHouse } from '../../util/apiCalls';
 
 export class Login extends Component{
     constructor() {
@@ -21,12 +21,12 @@ export class Login extends Component{
         const { setPlayerHouse, isLoading } = this.props
         try {
           isLoading(true);
-          const playerHouse = await getPotterApi('sortingHat');
+          const playerHouse = await getCharacterHouse();
           setPlayerHouse(playerHouse)
-          console.log(setPlayerHouse)
+          console.log('playerhouse', setPlayerHouse)
           isLoading(false)
         } catch ({ message }) {
-          console.log(message)
+            console.log(message)
         }
     };
 
@@ -40,6 +40,7 @@ export class Login extends Component{
     
     handleUser = () => {
         const { addUser, playerHouse } = this.props
+        console.log('player2', playerHouse)
         const user = {
             name: this.state.name,
             wizardType: this.state.wizardType,

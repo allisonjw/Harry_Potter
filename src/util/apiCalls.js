@@ -10,11 +10,12 @@ export const getPotterApi = async path => {
     return data
 };
 
-// export const getHerokuApi = async (url) => {
-//     const response = await fetch(url)
-//     const data = await response.json()
-//       if (!response.ok) {
-//         throw Error('Error fetching Heroku HP Api');
-//       }
-//     return data;
-// };
+export const getCharacterHouse = async (url) => {
+    const url2 = 'https://www.potterapi.com/v1/sortinghat'
+    const response = await fetch(url2)
+    if (!response.ok) {
+      throw Error('Error fetching character house');
+    }
+    const data = await response.json();
+    return data;
+};
