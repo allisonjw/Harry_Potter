@@ -1,8 +1,7 @@
 export const playerHouseReducer = (state = '', action) => {
     switch(action.type) {
       case 'SET_HOUSE':
-        const house = action.house
-        return house.toLowerCase();
+        return action.id;
       default:
         return state;
     }

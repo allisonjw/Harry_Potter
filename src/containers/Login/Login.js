@@ -23,7 +23,6 @@ export class Login extends Component{
           isLoading(true);
           const playerHouse = await getCharacterHouse();
           setPlayerHouse(playerHouse)
-          console.log('playerhouse', setPlayerHouse)
           isLoading(false)
         } catch ({ message }) {
             console.log(message)
@@ -40,11 +39,11 @@ export class Login extends Component{
     
     handleUser = () => {
         const { addUser, playerHouse } = this.props
-        console.log('player2', playerHouse)
+        console.log('playuer', playerHouse)
         const user = {
             name: this.state.name,
             wizardType: this.state.wizardType,
-            house: playerHouse.toLowerCase()
+            house: playerHouse
         };
         addUser(user)
         this.clearInputs();
@@ -59,8 +58,6 @@ export class Login extends Component{
     };
 
     render() {
-        const { user } = this.props;
-        const house = user === undefined ? '' : user.house;
         let submitButton;
 
         if(this.state.name !== '' && this.wizardType !== '') {
