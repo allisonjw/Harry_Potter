@@ -1,5 +1,6 @@
 # Harry Potter Game
 ## By [Allison Wagner](https://github.com/allisonjw)
+## [Live Site](http://harry_potter_ww.surge.sh/)
 
 ## Overview
 Harry Potter Game is a web based application that allows Wizards and Witches to view characters based on their houses! Additionally you will be able to select/deselect favorite characters and view your favorite collection. You can also view all spells. An additional iteration will be a matching game to match the spell name and the effect.
